@@ -4,10 +4,7 @@ import re
 batRegex = re.compile(r'Bat(wo)+man')
 
 matchObject = batRegex.search('The Adventures of Batman')
-try:
-    print(matchObject.group())
-except AttributeError:
-    print('Cannot find any bat(wo)+man')
+print(matchObject == None)
 matchObject = batRegex.search('The Adventures of Batwoman')
 print(matchObject.group())
 matchObject = batRegex.search('The Adventures of Batwowowoman')

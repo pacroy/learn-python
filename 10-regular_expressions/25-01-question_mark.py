@@ -9,10 +9,7 @@ matchObject = batRegex.search('The Adventures of Batwoman')
 print(matchObject.group())
 
 matchObject = batRegex.search('The Adventures of Batwowowoman')
-try:
-    print(matchObject.group())
-except AttributeError:
-    print('Cannot find any bat(wo)man')
+print(matchObject == None)
 
 print('==============================')
 
@@ -21,10 +18,7 @@ matchObject = phoneRegex.search('My phone number is 415-555-4242')
 print(matchObject.group())
 
 matchObject = phoneRegex.search('My phone number is 555-4242')
-try:
-    print(matchObject.group())
-except AttributeError:
-    print('Cannot find any phone number')
+print(matchObject == None)
 
 print('==============================')
 
