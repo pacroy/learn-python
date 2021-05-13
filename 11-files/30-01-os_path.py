@@ -44,3 +44,31 @@ abspath = os.path.abspath('file.txt')
 print(abspath)
 print(os.path.dirname(abspath))
 print(os.path.basename(abspath))
+
+print('==============================')
+
+# os.path.exists() returns true if the given path exists
+abspath = os.path.abspath('README.md')
+print(abspath)
+print(os.path.exists(abspath))
+
+# os.path.isfile() returns true if the given path is a file
+print(abspath)
+print(os.path.isfile(abspath))
+
+# os.path.isdir() returns true if the given path is a directory
+print(os.getcwd())
+print(os.path.isdir(os.getcwd()))
+
+# os.path.getsize() returns the size of the given file
+print(abspath)
+print(os.path.getsize(abspath))
+
+print('==============================')
+
+# os.listdir() returns list of all items in the given path
+print('\n'.join(os.listdir(os.getcwd())))
+
+print('==============================')
+
+# os.makedirs() creates a directory
