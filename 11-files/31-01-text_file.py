@@ -1,3 +1,5 @@
+import os
+
 # open() opens file in read-only mode
 helloFile = open('hello.txt')
 # read() reads file as a single string
@@ -17,3 +19,6 @@ helloFile.write('I\'m fine, thank you\n')
 helloFile.write('Where did you go last night?\n')
 helloFile.write('Did you enjoy the night?\n')
 helloFile.close()
+
+# Clean up
+os.remove('hello2.txt')
