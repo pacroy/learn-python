@@ -12,6 +12,6 @@ print(shelfFile.keys())
 shelfFile.close()
 
 # Clean up
-os.remove('mydata.bak')
-os.remove('mydata.dat')
-os.remove('mydata.dir')
+for filename in os.listdir():
+    if filename.startswith('mydata.'):
+        os.remove(filename)
