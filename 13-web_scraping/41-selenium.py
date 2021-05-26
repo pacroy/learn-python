@@ -4,14 +4,17 @@
 #   - Egde driver: https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/#downloads
 # Add installation folder to Path environment variable
 from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+def document_initialised(driver):
+    return driver.execute_script("return initialised")
 
 driver = webdriver.Edge(executable_path="msedgedriver.exe")
 driver.get("https://automatetheboringstuff.com/")
-driver.implicitly_wait(5)
+WebDriverWait(driver, timeout=10).until(lambda d: d.find_element_by_tag_name("body > div.main > div:nth-child(1) > ul:nth-child(21) > li:nth-child(1) > a"))
 
 element = driver.find_element_by_css_selector("body > div.main > div:nth-child(1) > ul:nth-child(21) > li:nth-child(1) > a")
 element.click()
-driver.implicitly_wait(3)
+WebDriverWait(driver, timeout=10).until(lambda d: d.find_element_by_tag_name("#calibre_link-1171 > p.copy2"))
 
 print('====================')
 
@@ -21,12 +24,15 @@ print(elements[0].text.strip())
 print('====================')
 
 driver.get("https://www.w3schools.com/html/html_forms.asp")
-driver.implicitly_wait(3)
+WebDriverWait(driver, timeout=10).until(lambda d: d.find_element_by_tag_name("#fname"))
 
 element = driver.find_element_by_css_selector("#fname")
 element.send_keys('Zophie')
 element.submit()
 
+
 print('====================')
 
+print("Press ENTER to quit...")
+input()
 driver.quit()
