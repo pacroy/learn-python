@@ -10,11 +10,11 @@ def document_initialised(driver):
 
 driver = webdriver.Edge(executable_path="msedgedriver.exe")
 driver.get("https://automatetheboringstuff.com/")
-WebDriverWait(driver, timeout=10).until(lambda d: d.find_element_by_tag_name("body > div.main > div:nth-child(1) > ul:nth-child(21) > li:nth-child(1) > a"))
+WebDriverWait(driver, timeout=10).until(lambda d: d.find_element_by_css_selector("body > div.main > div:nth-child(1) > ul:nth-child(21) > li:nth-child(1) > a"))
 
 element = driver.find_element_by_css_selector("body > div.main > div:nth-child(1) > ul:nth-child(21) > li:nth-child(1) > a")
 element.click()
-WebDriverWait(driver, timeout=10).until(lambda d: d.find_element_by_tag_name("#calibre_link-1171 > p.copy2"))
+WebDriverWait(driver, timeout=10).until(lambda d: d.find_element_by_css_selector("#calibre_link-1171 > p.copy2"))
 
 print('====================')
 
@@ -24,7 +24,7 @@ print(elements[0].text.strip())
 print('====================')
 
 driver.get("https://www.w3schools.com/html/html_forms.asp")
-WebDriverWait(driver, timeout=10).until(lambda d: d.find_element_by_tag_name("#fname"))
+WebDriverWait(driver, timeout=10).until(lambda d: d.find_element_by_css_selector("#fname"))
 
 element = driver.find_element_by_css_selector("#fname")
 element.send_keys('Zophie')
@@ -33,6 +33,7 @@ element.submit()
 
 print('====================')
 
-print("Press ENTER to quit...")
+print("Press ENTER to quit...", end='')
 input()
+print("Quiting...")
 driver.quit()
