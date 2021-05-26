@@ -3,6 +3,7 @@
 # Install WebDriver from https://www.selenium.dev/downloads/
 #   - Egde driver: https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/#downloads
 # Add installation folder to Path environment variable
+# Go to https://selenium-python.readthedocs.io/ for more information
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 def document_initialised(driver):
@@ -37,3 +38,4 @@ print("Press ENTER to quit...", end='')
 input()
 print("Quiting...")
 driver.quit()
+print("Go to https://selenium-python.readthedocs.io/ for more information")
