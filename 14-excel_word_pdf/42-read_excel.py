@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 # pip install openpyxl
 import openpyxl
-import os
 
 workbook = openpyxl.load_workbook("example.xlsx")
 print(f"workbook type={type(workbook)}")
