@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 # pip install python-docx
 import docx
 

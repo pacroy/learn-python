@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 # pip install selenium
 # Install WebDriver from https://www.selenium.dev/downloads/
 #   - Egde driver: https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/#downloads

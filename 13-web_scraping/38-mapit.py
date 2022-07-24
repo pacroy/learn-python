@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 # Open Google Map at given address
 # Usage: ./38-mapit.py <place to search>
 import webbrowser, sys, pyperclip

@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 # Just run by executing './22_cli_arguments.py <ARGS>'
 import sys
 
