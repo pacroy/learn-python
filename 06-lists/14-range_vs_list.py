@@ -5,7 +5,7 @@ print('==============================')
 
 def printList(aList):
     for i in range(len(aList)):
-        print('Index ' + str(i) + ' in the list is ' + supplies[i])
+        print('Index ' + str(i) + ' in the list is ' + aList[i])
 
 supplies = ['pens', 'staples', 'puncher', 'binders']
 printList(supplies)
