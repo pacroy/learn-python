@@ -15,7 +15,7 @@ print(r'That is Carol\'s cat.')
 
 print('==============================')
 
-# Multiline string using """ or ```
+# Multiline string using """ or '''
 print("""Dear Alice,
 Eve's cat has been arrested for catnapping, cat buglary, and extortion.
 Sincerely,
